@@ -6,9 +6,7 @@
       <class name="tests.Tests">
         <methods>
           <include name="tearDown"/>
-          <include name="pruebaTres"/>
           <include name="pruebaUno"/>
-          <include name="pruebaDos"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- tests.Tests -->

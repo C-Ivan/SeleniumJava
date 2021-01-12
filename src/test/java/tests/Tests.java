@@ -54,8 +54,8 @@ public class Tests {
 		PageLogin pageLogin = new PageLogin(driver);
 		PageLogFail pageLogFail = new PageLogFail(driver);
 		pageLogin.login("user", "user");
-		Helpers helper = new Helpers();
-		helper.sleepSeconds(3);
+		//Helpers helper = new Helpers();
+		//helper.sleepSeconds(10);
 		pageLogFail.assertLogFailPage();
 		
 	}
@@ -66,8 +66,8 @@ public class Tests {
 		PageLogin pageLogin = new PageLogin(driver);
 		PageLogSuccess pageLogSuccess = new PageLogSuccess(driver);
 		pageLogin.login("admin", "adm1n");
-		Helpers helper = new Helpers();
-		helper.sleepSeconds(1);
+		//Helpers helper = new Helpers();
+		//helper.sleepSeconds(1);
 		pageLogSuccess.assertLogSuccessPage();
 		
 	}

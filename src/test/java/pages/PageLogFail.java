@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -17,8 +18,11 @@ public class PageLogFail {
 		titleText = By.id("signInResultMessage");
 	}
 	
+	
 	public void assertLogFailPage() {
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		Assert.assertTrue(driver.findElement(titleText).getText().contains("Incorrect user name or password."));
-	}
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebElement logFail = driver.findElement(titleText);		
+		Assert.assertTrue(wait.until(ExpectedConditions.textToBePresentInElement(logFail, "Incorrect user name or password.")));
+				
+}
 }

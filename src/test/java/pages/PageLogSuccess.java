@@ -21,7 +21,9 @@ public class PageLogSuccess {
 }
 	
 	public void assertLogSuccessPage() {
-		Assert.assertTrue(driver.findElement(titleText).getText().contains("admin"));
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement logSuccess = driver.findElement(titleText);
+		Assert.assertTrue(wait.until(ExpectedConditions.textToBePresentInElement(logSuccess, "admin")));
 	}
 	
 	public void selectProduct(int index) {

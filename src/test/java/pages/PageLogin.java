@@ -42,7 +42,7 @@ public class PageLogin {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//Helpers helper = new Helpers();
 		//helper.sleepSeconds(1);
 	}
